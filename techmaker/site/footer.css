@@ -1,0 +1,51 @@
+/* footer.css */
+
+/* 3. RODAPÉ (FOOTER) ESTILIZAÇÃO */
+.main-footer {
+    background: var(--dark-background);
+    color: var(--light-text-color);
+    padding-top: 2rem;
+    font-size: 0.9rem;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+.footer-column h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+.footer-column ul a,
+.footer-column p {
+    color: var(--light-text-color);
+    line-height: 2;
+    transition: color 0.3s ease;
+}
+.footer-column ul a:hover {
+    color: var(--secondary-color);
+}
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--light-text-color);
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background: #111122;
+}
+
+/* Responsividade de Rodapé */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

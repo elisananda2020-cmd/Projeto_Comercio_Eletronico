@@ -1,0 +1,171 @@
+/* --- CABEÇALHO FIXO (HEADER) --- */
+.main-header {
+    background: var(--gradient-header);
+    color: var(--light-text-color);
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--light-text-color);
+}
+
+/* NAVEGAÇÃO PRINCIPAL */
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: var(--light-text-color);
+    padding: 0.5rem 0;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown-content {
+    /* ALTERADO: Oculta com opacidade e visibilidade para permitir a transição */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--gradient-header);
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    border-top: 2px solid var(--accent-color);
+    /* NOVO: Adiciona a transição para um fade-in suave */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    white-space: nowrap;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-content a:hover {
+    background-color: #172a50;
+    color: var(--accent-color);
+}
+
+/* Regra que FAZ o menu aparecer APENAS no hover */
+.dropdown-menu:hover .dropdown-content {
+    /* ALTERADO: Torna o menu visível e opaco no hover */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* AÇÕES DO HEADER (Busca e Ícones) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-actions input[type="search"] {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #1e335a;
+    color: var(--light-text-color);
+    outline: none;
+}
+
+.header-actions input[type="search"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.action-icon {
+    color: var(--light-text-color);
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.action-icon:hover {
+    color: var(--accent-color);
+}
+
+/* MANTIDO: ESTILOS DO CARRINHO (CART ICON E COUNT) */
+.cart-icon {
+    position: relative;
+    padding: 5px;
+    border: 0;
+    background: transparent;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff0000;
+    color: var(--light-text-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+    line-height: 1;
+}
+
+/* RESPONSIVIDADE PARA O HEADER */
+@media (max-width: 900px) {
+    .main-nav {
+        display: none;
+        /* Esconde a navegação principal no mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .header-actions input[type="search"] {
+        width: 100px;
+        /* Reduz o tamanho da barra de busca */
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .action-icon {
+        font-size: 1.2rem;
+    }
+}
