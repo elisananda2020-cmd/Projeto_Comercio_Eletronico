@@ -43,10 +43,6 @@ A TechMaker 3D é uma aplicação de comércio eletrônico voltada à venda de p
 
 O projeto possui caráter demonstrativo. Atualmente, permite registrar pedidos e atualizar o estoque, mas ainda não conta com integração de pagamentos reais ou gerenciamento completo de entregas.
 
-## Autora
-
-**Elis Ananda Alves Valente**
-
 Projeto desenvolvido para a disciplina de Comércio Eletrônico — Curso Superior de Tecnologia em Sistemas para Internet, IFAC.
 
 ---
